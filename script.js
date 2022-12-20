@@ -39,11 +39,9 @@ function writePassword() {
     }
 
     // Cancel function if user does not select a criteria
-    if(passwordContainer = " "){
+    if(passwordContainer.length === 0){
         alert("Please select at least one character type.");
     }
-
-    console.log(passwordContainer);
 
     // Function that loops through the given criteria to create a random password
     function generatePassword(){
@@ -55,14 +53,19 @@ function writePassword() {
 
         // Loop starts at 0, iterates until it reaches the random number generated from loopStop, and increments by 1
         for (var i = 0; i <= loopStop; i++){
+
+            // Generate a random number that is the length of loopStop or less
             var iterative = Math.floor(Math.random() * loopStop + 1);
+
+            // Iterate through passwordContainer and add the characters randomly selected to the pass variable
             pass += passwordContainer.charAt(iterative)
         }
+        // This is the value that exits this function
         return pass;
     }
 
+    // password will equal whatever we returned in the function
     var password = generatePassword();
-    console.log(password);
     var passwordText = document.querySelector("#password");
 
     passwordText.value = password;
