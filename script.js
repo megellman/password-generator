@@ -22,6 +22,16 @@ function writePassword() {
         passwordContainer = passwordContainer.concat(upperCase);
     }
 
+    // Numeric characters 
+    if(confirm("Click OK if password should have numeric characters.")){
+        passwordContainer = passwordContainer.concat(numeric);
+    }
+
+    //Special characters
+    if(confirm("Click OK if password should have special characters.")){
+        passwordContainer = passwordContainer.concat(special);
+    }
+
     
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
