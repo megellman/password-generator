@@ -12,6 +12,16 @@ function writePassword() {
     // Password criteria container 
     var passwordContainer = "";
 
+    // Lowercase letters
+    if(confirm("Click OK if password should have lowercase letters.")){
+        passwordContainer = passwordContainer.concat(lowerCase);
+    }
+
+    //Uppercase letters 
+    if(confirm("Click OK if password should have uppercase letters.")){
+        passwordContainer = passwordContainer.concat(upperCase);
+    }
+
     
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
