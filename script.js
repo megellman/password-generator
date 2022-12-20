@@ -9,6 +9,10 @@ function writePassword() {
     var numeric = "0123456789";
     var special = "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
     
+    // Password criteria container 
+    var passwordContainer = "";
+
+    
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
 
