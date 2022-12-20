@@ -45,17 +45,21 @@ function writePassword() {
         // This will hold the password created within the function
         var pass = "";
 
-        // Generates a random number between 8 and 128 
-        var loopStop = Math.floor(Math.random() * 128 - 8 + 1) + 8;
+        // Defining the maximum and minimum number of characters this password can have
+        var max = 128;
+        var min = 8;
+
+        // Generates a random whole number between the max and min provided above
+        var loopStop = Math.floor(Math.random() * (max - min) + 1) + min;
 
         // Loop starts at 0, iterates until it reaches the random number generated from loopStop, and increments by 1
         for (var i = 0; i <= loopStop; i++){
 
             // Generate a random number that is the length of loopStop or less
-            var iterative = Math.floor(Math.random() * loopStop + 1);
+            var randomNumberOfLoopStop = Math.floor(Math.random() * loopStop + 1);
 
-            // Iterate through passwordContainer and add the characters randomly selected to the pass variable
-            pass += passwordContainer.charAt(iterative)
+            // Run through the passwordContainer variable and pull out the character that is located at the index of the number provided by the randomNumberOfLoopStop variable
+            pass += passwordContainer.charAt(randomNumberOfLoopStop)
         }
         // This is the value that exits this function
         return pass;
