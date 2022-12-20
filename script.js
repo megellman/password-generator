@@ -27,12 +27,15 @@ function writePassword() {
         passwordContainer = passwordContainer.concat(numeric);
     }
 
-    //Special characters
+    // Special characters
     if(confirm("Click OK if password should have special characters.")){
         passwordContainer = passwordContainer.concat(special);
     }
 
-    
+    // Cancel function if user does not select a criteria
+    if(passwordContainer = ""){
+        alert("Please select at least one character type.")
+    }
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
 
