@@ -17,6 +17,7 @@ function writePassword() {
     else {
         return
     }
+
     // Lowercase letters
     if(confirm("Click OK if password should have lowercase letters.")){
         passwordContainer = passwordContainer.concat(lowerCase);
@@ -38,12 +39,30 @@ function writePassword() {
     }
 
     // Cancel function if user does not select a criteria
-    if(passwordContainer = ""){
-        alert("Please select at least one character type.")
+    if(passwordContainer = " "){
+        alert("Please select at least one character type.");
     }
 
+    console.log(passwordContainer);
+
+    // Function that loops through the given criteria to create a random password
+    function generatePassword(){
+        // This will hold the password created within the function
+        var pass = "";
+
+        // Generates a random number between 8 and 128 
+        var loopStop = Math.floor(Math.random() * 128 - 8 + 1) + 8;
+
+        // Loop starts at 0, iterates until it reaches the random number generated from loopStop, and increments by 1
+        for (var i = 0; i <= loopStop; i++){
+            var iterative = Math.floor(Math.random() * loopStop + 1);
+            pass += passwordContainer.charAt(iterative)
+        }
+        return pass;
+    }
 
     var password = generatePassword();
+    console.log(password);
     var passwordText = document.querySelector("#password");
 
     passwordText.value = password;
