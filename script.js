@@ -13,10 +13,7 @@ function writePassword() {
     var passwordContainer = "";
 
     // Confirm that user will accept a password length of 8-128 characters
-    if(confirm("Click OK if password should have a length of at least 8 characters and no more than 128 characters.")){}
-    else {
-        return
-    }
+    alert("Click OK if password should have a length of at least 8 characters and no more than 128 characters.");
 
     // Lowercase letters
     if(confirm("Click OK if password should have lowercase letters.")){
