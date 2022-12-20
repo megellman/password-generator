@@ -12,6 +12,11 @@ function writePassword() {
     // Password criteria container 
     var passwordContainer = "";
 
+    // Confirm that user will accept a password length of 8-128 characters
+    if(confirm("Click OK if password should have a length of at least 8 characters and no more than 128 characters.")){}
+    else {
+        return
+    }
     // Lowercase letters
     if(confirm("Click OK if password should have lowercase letters.")){
         passwordContainer = passwordContainer.concat(lowerCase);
@@ -36,6 +41,8 @@ function writePassword() {
     if(passwordContainer = ""){
         alert("Please select at least one character type.")
     }
+
+
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
 
