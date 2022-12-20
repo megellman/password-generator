@@ -9,7 +9,7 @@
 
 ## Description
 
-[Click here to view Deployed Site]()
+[Click here to view Deployed Site](https://megellman.github.io/password-generator/)
 
 image or gif
 
@@ -37,8 +37,9 @@ image or gif
 
 |Resource | Link |
 |-------|:-------|
-|  |  |
-|      |    |
+| Math.random() | [mdn web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)  |
+|  Array Methods and Properties | [w3 schools](https://www.w3schools.com/jsref/jsref_obj_array.asp)   |
+| String Methods | [w3 schools](https://www.w3schools.com/js/js_string_methods.asp)|
 ## License
 MIT License
 
