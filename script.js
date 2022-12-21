@@ -13,7 +13,12 @@ function writePassword() {
     var passwordContainer = "";
 
     // Confirm that user will accept a password length of 8-128 characters
-    alert("Click OK if password should have a length of at least 8 characters and no more than 128 characters.");
+    var passwordLength = prompt("How many characters should your password have? A password must have a length of at least 8 characters and no more than 128 characters.");
+
+    if(passwordLength < 8 || passwordLength > 128) {
+        alert("Error: Please select a value between 8 and 128.");
+        return
+    }
 
     // Lowercase letters
     if(confirm("Click OK if password should have lowercase letters.")){
@@ -45,12 +50,8 @@ function writePassword() {
         // This will hold the password created within the function
         var pass = "";
 
-        // Defining the maximum and minimum number of characters this password can have
-        var max = 128;
-        var min = 8;
-
         // Generates a random whole number between the max and min provided above
-        var loopStop = Math.floor(Math.random() * (max - min) + 1) + min;
+        var loopStop = Math.floor(Math.random() * passwordLength + 1) + passwordLength;
 
         // Loop starts at 0, iterates until it reaches the random number generated from loopStop, and increments by 1
         for (var i = 0; i <= loopStop; i++){
