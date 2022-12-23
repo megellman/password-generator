@@ -27,6 +27,7 @@ function generatePassword() {
         return
     }
 
+    console.log(passwordLength);
     //  If user selects criteria, add that criteria variable to the password criteria container
     if (lowerYes) {
         passwordContainer = passwordContainer.concat(lowerCase);
